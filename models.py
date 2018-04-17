@@ -17,7 +17,7 @@ Lottery choice task as proposed by Eckel/Grossman (2002), Evolution and Human Be
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
 
-    def before_session_starts(self):
+    def creating_session(self):
         for p in self.get_players():
 
             n = Constants.num_lotteries
@@ -67,7 +67,7 @@ class Player(BasePlayer):
     # add model fields to class player
     # ----------------------------------------------------------------------------------------------------------------
     lottery_choice = models.IntegerField()
-    outcome_to_pay = models.CharField()
+    outcome_to_pay = models.StringField()
     outcome_lo = models.CurrencyField()
     outcome_hi = models.CurrencyField()
 

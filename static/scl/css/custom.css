@@ -12,7 +12,7 @@ h2 {
     border-bottom: none;
 }
 
-.next-button {
+.otree-btn-next {
     margin: 40px auto;
     display: inherit;
 }
@@ -57,10 +57,15 @@ h2 {
     background-color: #f8f8f8;
 }
 
+.table {
+    margin-bottom: 0;
+}
+
 .table>thead>tr>th,
 .table>tbody>tr>td {
     text-align: center;
     vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .prob {

@@ -1,5 +1,5 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load staticfiles otree %}
 {% load i18n %}
 
 
@@ -26,13 +26,14 @@
 {% block content %}
     <div class="wrapper">
 
-        <div class="panel panel-default info">
+        <div class="card info">
             {% blocktrans trimmed %}
                 You decided to choose the following lottery:
             {% endblocktrans %}
         </div>
 
-        <div class="panel panel-default">
+        <br/>
+        <div class="card">
             <table class="table">
 
                 <!-- ----------------------------------------------------------------------------------------------- -->
@@ -103,10 +104,11 @@
             </table>
         </div>
 
-        <div class="panel panel-default info">
+        <br/>
+        <div class="card info">
             {% blocktrans trimmed with hi_lo=hi_lo payoff=player.payoff %}
                 A random draw determined that outcome {{ hi_lo }} has been realized. <br/>
-                Thus, your payoff from this task amounts to <b>{{ payoff }}</b>.
+                Thus, your payoff from this task amounts to {{ payoff }}.
             {% endblocktrans %}
         </div>
 
